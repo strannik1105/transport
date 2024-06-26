@@ -6,6 +6,7 @@ project(transport)
 
 set(SOURCES 
     main.cpp
+    transport/car.cpp
 )
 
 
