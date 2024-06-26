@@ -11,9 +11,7 @@ namespace Transport
 {
     class Car: public ITransport
     {
-        private:
-            std::string name;
-            int wheels_count;
+        public:
             int max_speed;
 
         protected:

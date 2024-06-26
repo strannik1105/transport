@@ -8,14 +8,12 @@ using namespace Transport;
 
 Car::Car(int max_speed)
 {
-    this->name = "автомобиль";
-    this->wheels_count = 4;
     this->max_speed = max_speed;
 }
 
 std::string Car::get_name()
 {
-    return this->name;
+    return "автомобиль";
 }
 
 int Car::get_max_speed()
@@ -25,7 +23,7 @@ int Car::get_max_speed()
 
 int Car::get_whels_count()
 {
-    return this->wheels_count;
+    return 4;
 }
 
 std::string Car::get_info()
