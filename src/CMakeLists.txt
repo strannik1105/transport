@@ -6,8 +6,10 @@ project(transport)
 
 set(SOURCES 
     main.cpp
-    transport/car.cpp
+    transport/bike.cpp
     transport/bus.cpp
+    transport/car.cpp
+    transport/scooter.cpp
 )
 
 

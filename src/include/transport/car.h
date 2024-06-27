@@ -4,23 +4,19 @@
 
 #include <string>
 
-#include "transport/transport.h"
+#include "transport/bike.h"
 
 
 namespace Transport
 {
-    class Car: public ITransport
+    class Car: public Bike
     {
-        public:
-            int max_speed;
-
         protected:
-            virtual std::string get_name();
-            virtual int get_whels_count();
-            virtual int get_max_speed();
+            virtual std::string get_name() override;
+            virtual int get_whels_count() override;
 
         public:
-            Car(int max_speed);
+            Car(int max_speed): Bike(max_speed) {};
             ~Car() {};
             virtual std::string get_info();
     };

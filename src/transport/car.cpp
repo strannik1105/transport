@@ -6,19 +6,9 @@
 using namespace Transport;
 
 
-Car::Car(int max_speed)
-{
-    this->max_speed = max_speed;
-}
-
 std::string Car::get_name()
 {
     return "автомобиль";
-}
-
-int Car::get_max_speed()
-{
-    return this->max_speed;
 }
 
 int Car::get_whels_count()
@@ -28,13 +18,5 @@ int Car::get_whels_count()
 
 std::string Car::get_info()
 {
-    return (
-        "Название: "
-         + this->get_name()
-         + "\nКоличество колёс: "
-         + std::to_string(this->get_whels_count())
-         + "\nМаксимальная скорость: "
-         + std::to_string(this->get_max_speed())
-        );
-
+    return Bike::get_info();
 }
