@@ -15,6 +15,7 @@ namespace Transport
     protected:
         std::string get_name() override;
         int get_whels_count() override;
+        int get_passangeres_count();
 
     public:
         Bus(int max_speed, int passangers_count): Car(max_speed)
