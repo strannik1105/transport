@@ -15,6 +15,11 @@ CMDParseResult::~CMDParseResult()
     free(this->tr_types);
 }
 
+enum ParseStatus CMDParseResult::get_status()
+{
+    return this->status;
+}
+
 std::vector<int>* CMDParseResult::get_types()
 {
     return this->tr_types;

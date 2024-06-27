@@ -18,7 +18,7 @@ class CMDParseResult
     public:
         CMDParseResult(enum ParseStatus status, std::vector<int>* tr_types);
         ~CMDParseResult();
-        // enum ParseStatus get_status();
+        enum ParseStatus get_status();
         std::vector<int>* get_types();
 };
 
