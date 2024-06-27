@@ -23,7 +23,16 @@ int main(const int argc, const char *argv[])
 
   for(auto i = types->begin(); i < types->end(); i++)
   {
-    std::cout << factory->get_transport_by_type(*i)->get_info() << std::endl << std::endl;
+    auto transport = factory->get_transport_by_type(*i);
+    
+    if(transport == nullptr)
+    {
+      std::cout << "неизвестный тип транспорта" << std::endl << std::endl;
+    }
+    else
+    {
+      std::cout << transport->get_info() << std::endl << std::endl;
+    }
   } 
 
   return 0;
