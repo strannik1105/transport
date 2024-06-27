@@ -6,6 +6,7 @@ project(transport)
 
 set(SOURCES 
     main.cpp
+    common/cmd_parser.cpp
     common/transport_factory.cpp
     transport/bike.cpp
     transport/bus.cpp

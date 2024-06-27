@@ -1,5 +1,7 @@
 #include <iostream>
+#include <memory>
 
+#include "common/cmd_parser.h"
 #include "common/transport_factory.h"
 
 
@@ -8,7 +10,15 @@ using namespace Transport;
 
 int main(const int argc, const char *argv[])
 {
-  TransportFactory* factory = new TransportFactory();
-  std::cout << factory->get_transport_by_type(0)->get_info() << std::endl;
+  auto cmd_parser = std::make_unique<CMDParser>();
+  auto factory = std::make_unique<TransportFactory>();
+  auto results = std::shared_ptr<CMDParseResult>(cmd_parser->parse(argc, argv));
+  auto types = results->get_types();
+
+  for(auto i = types->begin(); i < types->end(); i++)
+  {
+    std::cout << factory->get_transport_by_type(*i)->get_info() << std::endl;
+  } 
+
   return 0;
 }
